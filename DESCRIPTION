@@ -1,0 +1,17 @@
+Package: psa
+Type: Package
+Title: Utilities to Access Data from the Philippine Statistics Authority
+Version: 0.1.0
+Authors@R: person(given = "Ernest", family = "Guevarra", 
+                  email = "ernest@guevarra.io", role = c("aut", "cre"),
+                  comment = c(ORCID = "0000-0002-4887-4415"))
+Description: The Philippine Statistics Authority is the primary statistical arm
+    of the Philippine government. It is responsible in the conduct and content
+    of all national census and surveys, gathering of sectoral statistics,
+    consolidation of selected administrative recording systems, and compilation
+    of national accounts. As part of the Open Data Initiative, the PSA makes
+    its datasets publicly and widely availabe.
+License: GPL-3
+Encoding: UTF-8
+Language: en-gb
+LazyData: true
