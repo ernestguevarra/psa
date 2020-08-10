@@ -40,7 +40,8 @@ d2015 <- d2015 %>%
   mutate(residence = stringr::str_trim(residence, side = "both"))
 
 d2015 %>%
-  pivot_wider(id_cols = total:december, names_from = residence)
+  pivot_longer(cols = total:december, names_to = "month") %>%
+  pivot_wider(id_cols = "residence")
 
 
 
