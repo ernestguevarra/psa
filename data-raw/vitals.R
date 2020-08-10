@@ -2,6 +2,9 @@
 
 ## Libraries
 library(openxlsx)
+library(magrittr)
+library(dplyr)
+library(stringr)
 
 ## Read data
 d2015 <- read.xlsx(xlsxFile = "data-raw/vitals/deaths2015.xlsx",
@@ -32,6 +35,12 @@ names(d2015) <- c("residence", "total", "january", "february", "march", "april",
 names(d2019) <- names(d2018) <- names(d2017) <- names(d2016) <- names(d2015)
 
 
+##
+d2015 <- d2015 %>%
+  mutate(residence = stringr::str_trim(residence, side = "both"))
+
+d2015 %>%
+  pivot_wider(id_cols = total:december, names_from = residence)
 
 
 
